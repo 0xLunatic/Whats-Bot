@@ -62,15 +62,3 @@ client.on("message", (msg) => {
 });
 
 client.initialize();
-
-function initializeWebsite(){
- url = "https://api.sun3haxor.my.id/api/quotes?apikey=CSpwYNSB";
-    fetch(url)
-      .then(function (response) {
-        if (response != null){
-          return response.json();
-        } 
-    
-  
-    
-      });
