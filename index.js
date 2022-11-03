@@ -32,6 +32,9 @@ client.on("ready", () => {
   console.log("Client is ready!");
 });
 
+const url = "http://178.128.51.171:6969/";
+const key = "jD2Hr2IK";
+
 client.on("message", (msg) => {
   if (msg.body == "!help") {
     msg.reply(
@@ -39,8 +42,8 @@ client.on("message", (msg) => {
     );
   }
   if (msg.body == "!quotes") {
-    url = "https://api.sun3haxor.my.id/api/quotes?apikey=CSpwYNSB";
-    fetch(url)
+    urlAPI = url + "api/quotes?apikey=" + key;
+    fetch(urlAPI)
       .then(function (response) {
         return response.json();
       })
@@ -49,8 +52,8 @@ client.on("message", (msg) => {
       });
   }
   if (msg.body == "!bijak") {
-    url = "https://api.sun3haxor.my.id/api/bijak?apikey=CSpwYNSB";
-    fetch(url)
+    urlAPI = url + "api/bijak?apikey=" + key;
+    fetch(urlAPI)
       .then(function (response) {
         return response.json();
       })
@@ -59,8 +62,8 @@ client.on("message", (msg) => {
       });
   }
   if (msg.body == "!motivasi") {
-    url = "https://api.sun3haxor.my.id/api/motivasi?apikey=CSpwYNSB";
-    fetch(url)
+    urlAPI = url + "api/motivasi?apikey=" + key;
+    fetch(urlAPI)
       .then(function (response) {
         return response.json();
       })
