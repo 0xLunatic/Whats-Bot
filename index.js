@@ -92,10 +92,9 @@ client.on("message", (msg) => {
     urlAPI = url + "api/motivasi?apikey=" + key;
     fetch(urlAPI)
       .then(function (response) {
-        console.log(response.json());
         return response.json();
       })
-      .then(function (data) 
+      .then(function (data) {
         msg.reply('"' + data.result + '"');
       });
   }
