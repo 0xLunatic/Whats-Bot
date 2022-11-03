@@ -96,7 +96,7 @@ client.on("message", (msg) => {
         return response.json();
       })
       .then(function (data) 
-        console.log(data);
+        console.log("Work");
         msg.reply('"' + data.result + '"');
       });
   }
